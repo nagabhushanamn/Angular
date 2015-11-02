@@ -1,0 +1,18 @@
+
+<div class="row">
+	
+	<div class="col-md-3">
+		<img ng-src="{{product.images[0].thumb}}" style="width: 100px" class="img-responsive">
+	</div>
+
+	<div class="col-md-9">
+		<h4>
+			{{product.name | uppercase}} <small>{{product.make | date :'yyyy'}}</small>
+		</h4>
+		<h4>{{product.price | priceDiscount | currency : 'Rs.' : 2 }}</h4>
+		<button ng-show="product.canBuy">Add to cart</button>
+	</div>
+
+</div>
+
+

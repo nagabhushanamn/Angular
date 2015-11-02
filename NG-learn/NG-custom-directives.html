@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>App</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+input.ng-dirty.ng-invalid {
+	border: 1px solid red;
+}
+</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href>App</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav pull-right">
+					<li><a href><span class="glyphicon glyphicon-home"></span>Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" ng-app="App">
+
+		<div class="page-header">Angular :Custom Directives</div>
+
+
+		<!-- 		<div hello-world></div> -->
+		<!-- 		<div hello:world></div> -->
+
+		<!-- 	     <hello-world></hello-world> -->
+		<!-- 		 <hello:world></hello:world> -->
+
+		<!-- 		 <div class="hello-world"></div> -->
+
+		<!--          directive:hello-world -->
+
+	</div>
+
+
+
+	<script type="text/javascript" src="angular-1.4.6/angular.js"></script>
+
+	<script type="text/javascript">
+		var app = angular.module('App', []);
+
+		app.directive('helloWorld', function() {
+
+			return {
+				restrict : "AECM",
+				replace : true,
+				template : "<h3>Welcome to NG</h3>"
+			};
+
+		});
+	</script>
+
+
+</body>
+</html>

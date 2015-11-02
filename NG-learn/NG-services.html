@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>App</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+.ng-scope {
+	border: 1px solid red;
+	padding: 5px;
+}
+
+div {
+	margin: 5px;
+}
+</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href>App</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav pull-right">
+					<li><a href><span class="glyphicon glyphicon-home"></span>Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" ng-app="App">
+
+		<div class="page-header">Angular Services</div>
+
+		<div ng-controller="HelloCountController">
+			<button ng-click="sayHello()">Sayhello</button>
+			hello count : {{count}}
+		</div>
+
+		<div ng-controller="HelloCountController">
+			<button ng-click="sayHello()">Sayhello</button>
+			hello count : {{count}}
+		</div>
+
+		<div ng-controller="AnotherHelloCountController">
+			<button ng-click="sayHello()">Sayhello</button>
+			hello count : {{count}}
+		</div>
+
+	</div>
+
+
+
+	<script type="text/javascript" src="angular-1.4.6/angular.js"></script>
+
+	<script type="text/javascript">
+		var app = angular.module('App', []);
+
+		app.config(function(helloCountServiceProvider) {
+			//helloCountServiceProvider.setCount(100);
+		});
+
+		app.controller('HelloCountController', function($scope,
+				helloCountService) {
+			console.log('New controller-instance created...');
+			$scope.count = helloCountService.getCount();
+			$scope.sayHello = function() {
+				helloCountService.sayhello();
+				$scope.count = helloCountService.getCount();
+			};
+
+		});
+
+		app.controller('AnotherHelloCountController', function($scope,
+				helloCountService) {
+			console.log('New controller-instance created...');
+			$scope.count = helloCountService.getCount();
+			$scope.sayHello = function() {
+				helloCountService.sayhello();
+				$scope.count = helloCountService.getCount();
+			};
+
+		});
+
+		// 		-----------------------------------------------------------------
+
+		function HelloCounter() {
+			console.log('new helloCountService instance created...');
+			this.count = 0;
+			this.getCount = function() {
+				return this.count;
+			}
+			this.sayhello = function() {
+				this.count += 1;
+			}
+		}
+
+		//app.service('helloCountService', HelloCounter);
+
+		// 		-----------------------------------------------------------------
+
+		/* app.factory('helloCountService', function() {
+
+			console.log('helloCountService factory invoked..');
+
+			var count = 0;
+
+			return {
+				getCount : function() {
+					return count;
+				},
+				sayhello : function() {
+					count += 1;
+				}
+			};
+
+		}); */
+
+		// 		-----------------------------------------------------------------
+		app.provider('helloCountService', function() {
+
+			this.count = 0;
+
+			this.setCount = function(initialCount) {
+				this.count = initialCount;
+			}
+
+			this.$get = function() {
+				var that = this;
+				return {
+					getCount : function() {
+						return that.count;
+					},
+					sayhello : function() {
+						that.count += 1;
+					}
+				};
+			}
+
+		});
+
+		// 		-----------------------------------------------------------------
+
+		app.value('trainer', {
+			name : 'naga'
+		});
+
+		app.constant('Auth-Token', "3453sdfsdfg456456dfdf");
+	</script>
+
+
+</body>
+</html>
