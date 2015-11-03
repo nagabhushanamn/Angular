@@ -1,0 +1,38 @@
+
+
+Responsive Web Design ( RWD )
+-----------------------------
+
+web page should look good, and be easy to use, regardless of the device
+
+
+What is Responsive Web Design?
+
+RWD makes your web page look good
+on all devices (desktops, tablets, and phones).
+
+RWD is about using CSS and HTML to resize, hide, shrink, enlarge,
+or move the content to make it look good on any screen
+
+
+--------------------------------------------
+
+ responsive web design, favoring design that
+ dynamically adapts to different browser and device viewports, 
+ changing layout and content along the way
+
+
+ 
+ --------------------------------------------------------------
+ 
+ 
+ Flxible/Fluid Grid
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

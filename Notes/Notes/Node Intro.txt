@@ -1,0 +1,96 @@
+
+
+NodeJS
+-------
+
+
+Why Would I Use Node.js?
+=========================
+
+
+   --> JS raise 
+   
+   --> using JavaScript across the stack which unifies the language and data format (JSON)
+   
+   --> optimally reuse developer resources
+   
+   --------------------------------------------
+   
+   "Node.js® is a platform built on Chrome's JavaScript runtime for easily building fast,
+   scalable network applications.
+   Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient,
+   perfect for data-intensive real-time applications that run across distributed devices"
+   
+   ----------------------------------------------
+   
+   Ryan Dahl, the creator of Node.js,
+   
+    was aiming to create real-time websites with push capability, 
+	“inspired by applications like Gmail”.
+	
+	In Node.js, he gave developers a tool for
+	working in the non-blocking, event-driven I/O paradigm.
+   
+   -----------------------------------------------
+   
+   In one sentence: 
+   Node.js shines in real-time web applications employing push technology over websockets. 
+   
+   
+   ===============================================================================================
+
+   How Does It Work?
+   
+   
+   " non-blocking, event-driven I/O"
+   
+   
+      refer : pic
+	  
+  ==================================================================================================
+  
+  NPM: The Node Package Manager
+
+
+  ===================================================================================================
+
+  Examples of Where Node.js Should Be Used
+
+   --> CHAT
+   --> REST API ON TOP OF AN OBJECT DB ( MongoDB )
+   --> QUEUED INPUTS
+   --> DATA STREAMING
+   --> PROXY
+   --> BROKERAGE - STOCK TRADER’S DASHBOARD
+   --> APPLICATION MONITORING DASHBOARD
+   --> SYSTEM MONITORING DASHBOARD
+   
+
+   Where Node.js Can Be Used   
+
+
+   --> SERVER-SIDE WEB APPLICATIONS
+   
+   Where Node.js Shouldn’t Be Used
+   
+   --> SERVER-SIDE WEB APPLICATION W/ A RELATIONAL DB BEHIND
+   --> HEAVY SERVER-SIDE COMPUTATION/PROCESSING
+        
+		node-cluster
+   
+  
+  
+   
+   
+   Conclusion:
+   
+    Node.js was never created to solve the compute scaling problem. 
+    It was created to solve the I/O scaling problem, which it does really well.
+
+	Why use Node.js? If your use case does not contain CPU intensive operations nor access
+	any blocking resources, you can exploit the benefits of Node.js 
+	and enjoy fast and scalable network applications.
+	
+	Welcome to the real-time web.
+	
+	-----------------------------------------------------------

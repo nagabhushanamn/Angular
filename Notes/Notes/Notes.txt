@@ -1,0 +1,14 @@
+
+
+   NG - Routing
+   ---------------
+   
+     a. ngRoute  ( basic )
+	 
+	    limitations
+		
+		  --> nested view not possible
+		  --> multi-view possible
+		  
+		  
+	 b. ui-router	  ( advanced )  // angular-ui  team

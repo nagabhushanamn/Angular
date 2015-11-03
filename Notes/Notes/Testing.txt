@@ -1,0 +1,43 @@
+  
+  
+  NG  _ Testing
+  ----------------
+  
+  --> Unit Testing
+  --> E2E Testing
+  
+  --------------------------
+  
+    Unit-Testing
+	
+	   Testing F.W   --> Test cases
+	   
+	   --> Qunit
+	   --> Mocha
+	   --> DOH
+	   --> Jasmine   
+	   
+	   
+	   -----------------------
+	   
+	   Test Runner
+	   
+	   --> Karma
+	   
+	   -----------------------------
+	   
+	   E2E
+	   
+	   --> Jasmine
+	   
+	   Test Runner
+	   
+	   ProTractor
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   

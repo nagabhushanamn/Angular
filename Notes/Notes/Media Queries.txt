@@ -1,0 +1,17 @@
+
+
+Media queries
+---------------
+
+ added in CSS3
+ 
+ 
+ Syntax
+ ------
+ 
+ Media queries consist of a 'media type' and can, 
+ as of the CSS3 specification, contain one or more 'expressions',
+ expressed as media features, which resolve to either true or false. 
+ 
+ 
+ 

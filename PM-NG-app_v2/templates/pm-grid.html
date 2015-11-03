@@ -1,0 +1,35 @@
+
+<table
+	class="table table-bordered table-condensed table-striped table-responsive table-hover">
+
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Price</th>
+		<th>isAvailable</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	<tr ng-repeat="product in products">
+		<td>{{product.id}}</td>
+		<td><a ui-sref="viewAll.viewProduct({prodId:product.id})">{{product.name}}</a></td>
+		<td>{{product.price}}</td>
+		<td>{{product.isAvailable}}</td>
+		<td><a ui-sref=".editProduct({prodId:product.id})"><span
+				class="glyphicon glyphicon-edit"></span></a></td>
+		<td><a href ng-click="remove(product.id)"><span
+				class="glyphicon glyphicon-trash"></span></a></td>
+
+	</tr>
+
+</table>
+
+<div class="row">
+	<div class="col-md-6">
+		<ui-view name="columnOne"></ui-view>
+	</div>
+	<div class="col-md-6">
+		<ui-view name="columnTwo"></ui-view>
+	</div>
+</div>

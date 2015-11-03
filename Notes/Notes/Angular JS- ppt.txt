@@ -1,0 +1,566 @@
+  
+
+  1.
+  
+	   Angular Js
+	   ------------
+	       by Google Team
+		
+		
+	   what u need to know ?
+	   --------------------
+	   
+	   Must Know
+	   
+	   -> HTML & CSS 
+	   -> JavaScript
+	   
+	   Nice to Know
+	   
+	   -> BDD - Behavior Driven Devlopement.
+	   -> TDD - Test Driven Developement.
+	   
+	   	   
+	   Not So important
+	   
+	   -> jQuery
+	   -> Ruby on rails
+	   -> Python , PHP , etc.
+	   -> ( Server side F.ws.... ( Java , .Net )
+	   -> Databases
+	   -> No SQL ( Mongo DB )
+	   -> NodeJs
+	   
+	   
+	   -------------------------------------------
+	   
+	   why Angular ?
+	   
+	   If you're using Javascript 
+	   to create dynamic website,
+	   Angular is good choice.
+	   
+	    -> to do CRUD oprn on HTML with JS
+	   
+	    -> Angular helps you organize
+    	   your JavaScript  (mvc , mvvm )
+			
+		-> Angular helps to
+    	   create responsive (as in fast )websites
+			
+		-> Angular plays well with jQuery
+		
+		-> Angular is easy to test
+	   
+	   
+	   -------------------------------------------------------------
+	   
+	   Web-server                                       web-browser
+	   
+	         <------- URL request to server ---------     
+	         ------- Response with Webpage & Assets--> ( HTML ,JS , CSS)
+	    
+		                                               Browser loads-up
+													   entire webpage
+
+													   
+	         <------- User click on link, new Request ---------     
+	         ------- Response with Webpage & Assets--> ( HTML ,JS )
+	    
+		                                               Browser loads-up
+													   entire webpage
+	   
+	   
+	   ---------------------------------------------------------------
+	   
+	   
+	   
+	   
+	   
+	   
+	   -----------------------------------------------------------------
+	   Web-server                                      web-browser
+	   -----------------------------------------------------------------
+	   
+	         <------- URL request to server ----------     
+	         ------- Response with Webpage & Assets--> ( HTML ,JS )
+	    
+		                                               Browser loads-up
+													   entire webpage
+	   
+	   
+	         <------- User click on link, new Request --     
+	         ------- Response with XML/JSON data / Templates----------> ( Data )
+	    
+		                                                Data is loaded into
+	                                                    existing page. 
+					
+			SPA ( Single Page Application)				
+			
+	   ---------------------------------------------------------------------------
+	   
+	   
+	   Modern  API -Driven Application
+	   
+	   ------------------------|
+	   |            services   |   <-------> Browser-App  ( Angular)
+	   |  DataSource <--> API  |   <-------> Mobile-App
+	   |                       |   <-------> Developers
+	   |-------------------------
+	   
+	   (REST API)
+	   
+	   --------------------------------------------------------------------
+	   
+	   
+	   
+
+	   
+	   what is Angular JS ?
+	   ---------------------
+	   
+	   A client-side JavaScript Framework
+	   for adding interactivity to HTML.
+	   
+       --------------------------------------------------------------------	   
+	   
+	   How do we tell our HTML 
+	   when to trigger our JavaScript?
+	   
+	   
+	   soln:-'ng -  Directives'
+	   
+	   -------------------------------------------------------------------
+	   
+	   Directives
+	   ----------
+	   
+	   A Directive is a marker on
+	   a HTML-tag that tells Angular 
+	   to run or reference some JavaScript code.
+	   
+	  ---------------------------------------------------------------------
+
+	  Downloading the libraries
+	  ------------------------
+	  
+	  Download Angular JS , http://angularjs.org
+	  
+	  we'll need angular.min.js
+	  
+	  optional : Download Twitter Bootstrap : http://getbootstrap.com
+	  we'll need bootstrap.min.js
+	  
+	  --------------------------------------------------------------------
+
+	  Modules
+	  --------
+	  
+	  -> Where we write pieces of our Angular Applications.
+	  -> Makes our code more maintainable , testable  and readable.
+	  -> Where we define dependencies of our app.
+	  
+	           |  ---- M2
+			M1 |  
+			   |  ---- M3
+	    
+		  ( modules can use other modules )
+		  
+	-------------------------------------------------------------------------
+
+	Creating Our First Module
+	--------------------------
+	
+	var app=angular.module('store',[]);   ( module )
+	
+	
+	angular  --> AngularJS
+	store    --> ApplicationName
+	[]       --> Dependencies
+	
+	
+	
+	directives : ng-app='' 
+	( Run this module when document loads )
+	
+	------------------------------------------------------------------------
+	
+	
+	Expressions
+	------------
+	
+	Allow you to insert dynamic values into your HTML.
+	
+	
+	<p>I am {{4+6}}</p> -----> <p>i am 10</p>
+	
+	<p>{{'hello'+'you'}} ---> <p> hello you </p>
+	
+	+ More operations
+	http://docs.angularjs.org/guide/expression
+	
+	
+	
+	-------------------------------------------------------------
+	
+	2. 
+	
+	Working with Data
+	-----------------
+	
+	var item={
+	name:'samsung A7',
+    price:29000.00,
+    description:'.....'	
+	}
+	
+	---------------------------------------------------------------
+	
+	Controller
+	-----------
+	
+	   Controllers are where we define our app's 
+	   behavior by defining
+	   functions and values.
+
+	  
+	   app.controller('StoreController',function(){
+		
+	   });
+	   
+	------------------------------------------------------------------   
+	
+	View With Model
+	-------------------
+	
+	<div ng-controller='store'>
+	
+	<h1>{{store.product.name}}</h1>
+	
+	</div>
+	
+	
+	
+	-------------------------------------------------------------------
+	
+	3.
+	
+	Built-in Directives
+	--------------------
+	
+	  ng-show      ( Adding Purchase Button )
+	  ng-hide      ( Soldout )
+	  
+	  ng-repeat    ( Many-Items )
+	
+	---------------------------------------------------------------------
+	
+	
+	
+	what we have learned so far
+	
+	
+	a. Directives  - HTML annotations that trigger JS behavior.
+	b. Modules     - Where our application comp live.
+	c. Controllers - Where we add application behav.
+    d. Expressions - How values get displayed within page/View.
+
+	
+   -------------------------------------------------------------	
+	
+	
+	
+	Level-2
+	-------
+	
+	a.
+	
+	Filters and New Directives and Cleaner Code
+	-------------------------------------------
+	
+	
+	
+	Directives we know & love
+	------------------------
+	
+	  ng-app          - attach application module to page.
+	  ng-controller   - attach Controller function to the page.
+	  ng-show/ng-hide - display a section based on expression
+	  ng-repeat       - repeat a section for each item in Array
+	  
+	  
+	 ----------------------------------------------------
+
+     Our First Filter
+	 -----------------
+	 
+	  {{product.price | currency }}
+	 
+      Formatting with Filters
+
+	  date:
+	  {{'124576543234567' | date:MM/dd/yyyy @ h:mma'}} 
+	  
+	  uppercase & lowercase
+	  {{'naga'|uppercase}}
+	  
+	  limitTo
+	  {{'My Description'|limitTo:8}}
+	  <li ng-repeat="product in store.products | limitTo:3>
+	  
+	  orderBy
+	  <li ng-repeat="product in store.products | orderBy:'-price'>
+	  
+	  
+	  -------------------------------------------------------------
+	  
+	  
+	   Adding an Image Array to our product Array
+	   ------------------------------------------
+	  
+	    using ng-source for images
+		<img src="" ng-src=""/>
+		
+		
+		------------------------------------------------
+		
+		New Directive :- ng-click
+		
+		when ng-click changes the value of tab...
+		 .. the {{tab}} expression automatically gets updated.
+		 
+		Expressions define a 2-way DataBinding 
+		 this means Expressions are re-evaluated
+		 when property changes.
+		
+		----------------------------------------
+		
+		Lets add the tab content panels.
+		
+		----------------------------------------
+		
+		Setting the Initial value.
+		
+		directive : ng-init
+		
+		-----------------------------------------
+		
+		Setting the Active Class
+		
+		 we need to set the class to active 
+		 if current tab selected.
+		 
+		--------------------------------------------------
+
+        Feels dirty , Dosen't it
+		
+		with 'PanelController'
+		
+		---------------------------------------------------------------
+		
+		
+		
+		Level-3
+		--------
+		
+		a.
+		
+		  Adding Reviews to our products
+		  
+		  
+		 --------------------------------------------
+
+         Adding Review Controller
+
+         using ng-submit to make the Form work
+		 
+		 ---------------------------------------------
+
+		 product-panels - directive
+		 
+		 -------------------------------------------
+		 
+		 
+			Level-4
+			----------
+		
+			Creating a Directive with an associated Controller
+			----------------------------------------------------
+				
+			Directive : 'ng-include'
+			
+			ng-include is expecting a variable with 
+			the name of the file include.
+			
+			To pass the name directly as string,
+			use single quotes.('...');
+			
+			
+			---------------------------
+			
+			using ng-include
+			
+			<div ng-include="'product-title.html'"></div>
+			
+			using Custom Directive
+			
+			<product-title><product-title>
+			
+			
+			why directives ?
+			
+			Directive allow u to write HTML
+			that express the behavior 
+			of youe application.
+			
+			
+			Writing Custom Directives
+			
+			Template Expanding Directives are simplest.
+			
+			 -> define a custom tag or attribute that is
+			    expanded or replaced. 
+			 -> can include Controller logic , if needed.
+			 
+			 
+			Directives can also be used for :
+
+             -> Expressiong Complex UI
+             -> Calling events and Registering event handlers.
+             -> Re-using Common components.   			 
+			 
+			
+			How to build Directive ?
+			
+			<product-title></product-title>
+			
+			app.directive('productTitle'function(){
+			return {
+			restrict:'E',
+			templateUrl:'product-title.html'
+			};
+			});
+			
+			( dash in HTML translate to .
+			.. camelCase in Javascript)
+			
+			
+			---------------------------------------------------------
+			
+			
+			Attribute vs Element Directives
+			
+			
+			Element Directtive
+			<product-title></product-title>
+			
+			Attribute Directive
+			<div product-title></div>
+			
+			Use Element Directive for UI Widgets,
+			and  Attribute
+			Directives for mixn behav.. like tooltip.
+			
+			
+			------------------------------------------------
+			
+			
+			Directives allow you to write better HTML.
+			
+			  When u r writing an AngularJS application,
+			  u should be able to understand behav and intent of from just HTML
+			  
+			  And u'r likely using custom directives
+			  to write expressive HTML
+
+    -----------------------------------------------------			  
+	
+		Level-5
+		
+		Module Inception.
+			
+			
+			How shud i organize my application modules.?
+
+			Best to split Modules around functionality.
+			
+	--------------------------------------------------------------
+	
+	 Dependencies
+	 ------------
+		
+	  we need a service !
+	  
+	   services give your controller
+	   additional functionality, like
+	    -> Fetching JSON data from a web service with '$http'
+		-> Logging messages to the JS console with '$log'
+		-> Filtering an array with $filter.
+		
+		
+	  Introducing the $http Service!
+	  
+	  $http Service is how we make an asynch request to server
+	  
+	  $http({method:'GET',url='/products.json'});
+	  
+	  Or using one of shortcut methods
+	  
+	  $http.get('/products.json',{key:val});
+	  
+	  
+	  Both return a promise object with .success() and .error()
+	   
+	  if we tell $http fetch JSON, the result will be automatically
+      decoded into JavaScript objects and arrays.
+	   
+	-------------------------------------------------------------------	
+		
+	How does a controller use Service like $http ?
+  
+    use this funky array syntax:
+
+	e.g-1
+	
+    app.controller('StoreController',['$http',function($http){
+	
+	}]); 	
+	
+	e.g-2
+	
+	app.controller('StoreController',['$http',$log,function($http,$log){
+	
+	}]);
+	
+	
+	-------------------------------------------------------------------
+	
+	When Angular is Loaded Services are Registered
+	
+	
+	                |----------------
+		   Injector |  $http , $log , ...
+		            |
+					|----------------
+	
+	A Controller is Initialized ,
+	dependecies injected by Angular Injector. 
+		
+	[demo]
+   --------------------------------------------------------------------
+
+	
+	  
+	  
+	  
+
+	  
+	  
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   

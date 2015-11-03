@@ -1,0 +1,56 @@
+
+
+  Bower
+  ------
+  
+   Bower Package Manager
+   
+   
+   
+   npm install -g bower
+   
+   bower install jquery
+   
+   bower list
+   
+   bower list --paths
+   
+   -------------------------
+   
+   bower backbone
+   
+   --------------------------
+   
+   
+   bower uninstall jquery
+   
+   ----------------------------
+   
+   bower install jquery#1.9.2
+   
+   ------------------------------
+   
+   bower init   ( bower.json )
+   
+   -----------------------------
+   
+   
+   bower install jquery#1.9.1 --save
+   
+   -------------------------------
+   
+   bower install bootstrap --save
+   
+   ----------------------------------
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   

@@ -1,0 +1,35 @@
+
+
+   NG- Routing
+   
+   
+   
+   ui-router
+   ------------
+   
+	$stateProvider works similar to Angular's ui router,
+	but it focuses purely on state
+	
+	A state corresponds to a "place" in the application in terms of the overall UI and navigation.
+	
+	
+	Where does the template get inserted?
+	
+	<!-- in index.html -->
+	<body ng-controller="MainCtrl">
+	<section ui-view></section>
+	</body>
+	
+	
+	------------------------------------------------------
+	
+	Activating a state
+	
+	1.Call $state.go(). High-level convenience method. 
+	2.Click a link containing the ui-sref directive. 
+	3.Navigate to the url associated with the state. 
+	
+	--------------------------------------------------------
+	
+	
+	http://angular-ui.github.io/ui-router/

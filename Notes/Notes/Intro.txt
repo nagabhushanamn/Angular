@@ -1,0 +1,71 @@
+
+
+DOM structure  --> static
+
+--> Javascript
+
+
+what JS can do on HTML page ?
+
+  based on DOM stantard , on event
+  
+  -->  can change element's styles 
+  -->  can change element's attribute values
+  -->  can change element's text content
+  -->  can create/delete elements 
+  -->  can do form validation
+  -->  can read/write cookies
+  -->  can create Rich UI comp
+  -->  can bring WEB APIs ( XHR , HTML 5 APIs) functionality to the page
+  
+  -----------------------------------------------------------
+  
+  
+ Limitations when plain Javascript code 
+ 
+ 
+ --> too much lines code for simple oprns.
+ --> browser incompatibility
+ --> code orgazation too diffcult
+ 
+ 
+ ------------------------------------------------------------
+ 
+ 
+ JS libraries / F.Ws
+ 
+ --> jQuery
+ 
+     too level
+	 
+	Higher-level JS F.Ws  ( MVC )
+
+     --> Backbone
+     --> Angular JS
+     --> Ko
+     --> Ember JS	
+
+      UI componets
+
+      --> DOJO
+      --> Ext JS  ( commercial )	  
+	 
+    etc.................................
+	
+	--------------------------------------------
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  

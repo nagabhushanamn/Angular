@@ -1,0 +1,45 @@
+ 
+   Angular-  scope
+   ================
+   
+   --> is an object that refers to the application model
+   --> is an execution context for expressions
+   --> Scopes are arranged in hierarchical structure
+       ( which mimic the DOM structure of the application)
+   --> Scopes can  watch expressions and propagate events.	   
+  
+   
+   Scope characteristics
+   ---------------------
+      
+   --> Nested scopes are either 
+       "child scopes" or "isolated scopes"
+   --> A "child scope" (prototypically) 
+       inherits properties from its parent scope
+   --> An "isolate scope" does not
+   
+   
+   Scope as Data-Model
+   ----------------------
+   
+   -> Scope is the glue between application controller
+      and the view.
+	  
+	Scope Hierarchies
+	-----------------
+	
+	Each Angular application has exactly one root scope,
+	but may have several child scopes.
+	
+   
+    ----------------------------------------------------
+	
+	Demo
+	
+	----------------------------------------------------
+	
+	
+	
+	
+	
+	

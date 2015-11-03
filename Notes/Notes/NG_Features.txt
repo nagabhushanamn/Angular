@@ -1,0 +1,24 @@
+
+  
+    Angular - JS
+	-------------
+	
+	Advantages / Features
+	
+	
+	  1. modules
+	  2. Dependecy Injection  ( DI container)
+	  3. Declrative programming  with 'Directives'
+	  4. MVC 
+
+        	 MVVM ( Model , View , ViewModel)
+			 
+	  5. Two-way Data binding
+	  
+	  6. Testing
+	  
+	  
+
+      -----------------------------------------------	  
+	  
+	  

@@ -1,0 +1,265 @@
+
+   
+    What the heck is the event loop anyway ?
+
+	
+	
+	
+	   How does Javascript even work 
+	   ???
+	   
+	   -----------------------------------------------------
+	   
+	   what are you 
+	   
+	   'JS' ?
+	   
+	   -> "a single threaded, non-blocking , asychronous , concurrent language"
+	   
+	   -> i have a call stack, an event loop, a callback queue , some other APIs and stuff
+	   
+	   --------------------------------------------------------------------------------
+	   
+	   hey 'v8', do you have a call stack, an event loop, a callback queue ,
+	   some other APIs and stuff
+	   
+	    -> i have a call stack and a Heap   , thats it. i dono others.
+		
+		
+		
+		chrome's V8
+		rhino
+		nashorn
+		Apache couchDB
+		
+      -------------------------------------------------------------------------------------
+	  
+	  
+	  
+	  JS Runtime  (e.g v8 engine )
+	  
+	      -> Heap   ( Memory Allocation)
+	      -> Stack  ( Execution contexts) 
+	  
+	  
+	     
+	  ----------------------------------------------------------------------------------------
+    
+	  ??
+	     setTimeout()  , DOM  , XHR  are not part of JS runtime environement
+
+		????
+      -----------------------------------------------------------------------------------------
+
+      Browser
+	  
+	       
+	    JS Runtime  (e.g v8 engine )
+	  
+	      -> Heap   ( Memory Allocation)
+	      -> Stack  ( Execuation contexts) 
+		
+		
+        Web APIs
+
+        Event Loop
+
+        Callback queue
+
+      -----------------------------------------------------------------------------------------
+
+
+	  the call stack
+
+
+      one thread == one call stack == one thing at a time
+	  
+	  
+	  
+	  
+	  -----
+	  
+	  Call Stack - demo
+	  
+	  ex.1
+	  
+	  function multiply(a,b){
+	  return a*b;
+	  }
+	  
+	  function square(n){
+	  return multiply(n,n);
+	  }
+	  
+	  function printSquare(n){
+	  var squared=square(n);
+	  console.log(squared);
+	  }
+	  
+	  printSquare(4);
+	  
+	  
+	  
+	  
+	  ex.2
+	  
+	  function foo(){
+	  throw new Error('oops');
+	  }
+	  
+	  function bar(){
+	  foo();
+	  }
+	  
+	  
+	  function baz(){
+	  bar();
+	  }
+	  
+	  baz();
+	  
+	  
+	  e.g .3
+	  
+	  function foo(){
+	  return foo();
+	  }
+	  
+	  foo();
+	  
+	  
+	  -------------------------------------------------------------------------------------------
+	  
+	  
+	  Blocking
+	  
+	  
+	     what happens when things are slow ?
+		 
+		    e.g
+			
+			   big loops
+			   img processing
+			   Network requests
+		 
+	  ---------------------------------------------------------------------------------------------	 
+		 
+	  Blocking 
+		 
+		 
+		 e.g
+		 
+		 
+		    var foo=$.getSynch('//foo.com');    wait........  done
+			var bar=$.getSynch('//bar.com');    wait........  done
+			var baz=$.getSynch('//baz.com');    wait........  done
+			
+			console.log(foo);
+			console.log(bar);
+			console.log(baz);
+			
+			
+			
+			why is this a problem ?
+			because , browsers.
+			
+			(demo)
+			
+	  ----------------------------------------------------------------------------------------------
+
+
+	   the Solution ?
+	   
+	       Asynchronous callbacks
+		   
+		   ( here is a function. call me maybe )
+	   
+	   
+	        How does this work ?
+			
+			
+			e.g   Asyn callbacks & The Call Stack ?
+			
+			console.log('hi');
+			
+			
+			setTimeout(function(){
+			console.log('there');
+			},5000);
+			
+			console.log('JS');
+			
+			
+			
+			
+	    ---------------------------------------------------------------------------------------- 
+	  
+	  
+	      Concurrency & The Event Loop
+		  
+		    ( One thing at a time, expect not really )
+			
+			
+		   (demo with pic and code demo)
+		  
+	     
+		 
+		 e.g-1
+		 
+		    console.log('hi');
+			
+			setTimeout(function(){
+			console.log('there');
+			},5000);
+			
+			console.log('JS');
+		 
+		 e.g-2
+		 
+		    console.log('hi');
+			
+			setTimeout(function(){
+			console.log('there');
+			},0);
+			
+			console.log('JS');
+		 
+		 e.g-3
+		 
+		    console.log('hi');
+			
+			$.get(url,function cb(data){console.log(data)});
+			
+			console.log('JS');
+		 
+		 
+		 
+         ----------------------------------------------------------------------------------------
+		 
+		 
+		 
+		 synch
+		 
+		 [1,2,3].forEach(function(i){
+		 console.log(i);
+		 });
+		 
+		 async
+		 
+		 function asyncForEach(array,cb){
+		 array.forEach(function(i){
+		 setTimeout(cb(i),0)
+		 });
+		 }
+		 
+		 asyncForEach([1,2,3],function(i){//dothing});
+		 
+		 
+		 ----------------------------------------------------------------------------------------
+	    
+	  
+	   
+	   
+	   
+	   
+	     http://latentflip.com/loupe  : JS EventLoop - simulator

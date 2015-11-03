@@ -1,0 +1,16 @@
+
+
+
+NG - validation
+--------------------
+
+
+by default , NG keeps form and form-fields in following states
+
+
+ng-pristine  --> not interacted by user
+ng-dirty     --> interacted bu user 
+ng-valid     --> valid
+ng-invalid   --> invalid
+
+---------------------------------------------------------------

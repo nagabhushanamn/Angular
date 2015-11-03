@@ -1,0 +1,312 @@
+WHY YOU NEED A BUILD SYSTEM 
+LIKE GRUNT, GULP, BRUNCH FOR YOUR WEBSITE
+
+
+
+what shuold a build system do ?
+ 
+   --> Repetitive Tasks
+   
+       --concatenating Javascript
+	   --Prefixing CSS
+	   
+   --> Utilities
+       --JSHint
+	   --uglify ( compress/minify) javascript
+   --> Local Server
+   --> Live Reload
+   
+   
+   common build-systems
+   
+   1.GRUNT - 2.GULP - 3.BRUNCH
+   
+   
+ why is this good for you ?
+
+
+   Page speed
+    
+	 -- Less file requests for page load
+	 -- You can break code into multiple files
+	 -- Easier to avoid code conflicts
+	 -- You can avoid annoying, repetitive tasks
+	 
+	 
+   ---------------------------------------------------
+   
+   Grunt makes your web development better
+   ----------------------------------------
+   
+   
+   npm install -g grunt-cli
+   
+   -------------------------------
+   
+   create project
+   
+   --------------------------------
+  
+   npm init
+  
+   npm install grunt --save
+
+   
+   ---------------------------------
+   
+   create 'Gruntfile.js'  in project
+   
+   // Gruntfile.js
+   
+   module.exports=function(grunt){
+   
+   grunt.registerTask('speak', function() {
+		console.log("I'm Speaking");
+	});
+	grunt.registerTask('yell', function() {
+		console.log("I'm Yelling");
+	});
+	
+	grunt.registerTask('both',['speak','yell']);
+   
+   }
+   
+   ----------------------------------------------
+   
+   grunt both
+   
+   ------------------------------------------------
+
+   open grunt plugin site
+
+   -------------------------------------------------
+   
+   npm install grunt-contrib-concat --save-dev
+   
+   -------------------------------------------------
+   
+     -- create js dir with 2 Js files
+	 -- create css dir with 2 css files
+	 -- copy configuration  from grunt page
+	 
+	 
+   --------------------------------------------------
+
+
+    sample
+
+	grunt.initConfig({
+		concat : {
+			js : {
+				src : [ 'js/1.js', 'js/2.js'],
+				dest : 'dist/js/built.js',
+			},
+			css : {
+				src : [ 'css/main.js', 'css/theme.js'],
+				dest : 'dist/css/styles.js',
+			},
+		},
+	});
+
+	grunt.loadNpmTasks('grunt-contrib-concat');	
+	 
+   ----------------------------------------------------------
+   
+   
+   
+   npm install grunt-contrib-watch --save-dev
+   
+   
+   
+   
+   grunt.loadNpmTasks('grunt-contrib-watch');
+   
+   watch: {
+	  scripts: {
+		files: ['**/*.js'],
+		tasks: ['jshint'],
+		options: {
+		  spawn: false,
+		},
+	  },
+	}
+   
+   -----------------------------------------------------------
+   
+   
+   
+   sample
+   
+   grunt.initConfig({
+		concat : {
+			js : {
+				src : [ 'js/1.js', 'js/2.js' ],
+				dest : 'dist/js/built.js',
+			},
+			css : {
+				src : [ 'css/main.css', 'css/theme.css' ],
+				dest : 'dist/css/styles.css',
+			},
+		},
+		watch : {
+			scripts : {
+				files : [ 'js/*.js' ],
+				tasks : [ 'concat:js' ],
+			},
+			styles : {
+				files : [ 'css/*.css' ],
+				tasks : [ 'concat:css' ],
+			},
+		},
+	});
+
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.registerTask('default',['concat','watch']);
+	
+	
+	------------------------------------------------------------------------------
+	
+	
+	
+	Live-Server
+	------------
+	
+	npm install -g live-server
+	
+	demo
+	
+	--------------------------------------------------------------------------------
+	
+	
+	YEOMAN
+	--------
+	
+	
+	
+	npm install -g yo
+	npm install -g generator-webapp
+	
+	
+	yo
+	
+	
+	grunt server
+	
+	----------------
+	
+    do HTML and CSS change demo for live reload
+	
+	-------------------------------
+	
+	grunt build
+	
+	----------------------------------
+	
+	bower install backbone
+	
+	grunt build
+	
+	--------------------------------------
+	
+	
+	
+	
+	GULP
+	-----
+	
+	     - build system
+	
+	npm install -g gulp
+	
+	
+	-------------------------------
+	
+	create 'gulpfile.js'
+	
+	var gulp=require('gulp');
+
+	gulp.task('default',function(){
+		console.log('HelloWorld');
+	});
+	----------------------------------------
+	
+	gulp-uglify
+	
+	  -->refer  site
+	  
+	----------------------------------------  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   

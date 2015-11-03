@@ -1,0 +1,45 @@
+
+
+
+   NG- Directives
+   ---------------
+   
+     ng-XXXXX  ---> built-in directives
+	
+	 Custom - Directives
+	 
+	 
+	 4 - styles of NG- Directives
+	 
+	 Attribute  --> To provide functionality/Mix-In to Existing HTML element.
+	 Element    --> UI-Widget
+	 
+	 Class      --> to apply CSS styles throgh class Name
+	 Comment    
+	 
+	 
+	 Attribute vs Element Directives
+			
+			
+	Element Directtive
+	<product-title></product-title>
+	
+	Attribute Directive
+	<div product-title></div>
+	
+	Use Element Directive for UI Widgets,
+	and  Attribute
+	Directives for mixn behav.. like tooltip.
+	
+	 
+	 ------------------------------------------------------
+	 
+	 
+
+      JQlite
+	  
+	 -------------------------------------------------------
+
+	 Transclusion	 
+	  
+	 ------------------------------------------------------- 

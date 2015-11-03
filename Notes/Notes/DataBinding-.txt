@@ -1,0 +1,75 @@
+
+
+
+    Directives
+	
+	    --> in scope    e.g   ng-hide , ng-show , product-title
+		  
+		    scope: false
+		
+		--> child scope  e.g  ng-controller , ng-include
+		
+		    scope: true
+		
+		--> isolated scope 
+		
+		    scope:{
+			prop:'@someAttr'  // one way binding
+			prop2:'=someAttr' // Two way binding
+			prop3:'&sommeAttr' // Func Binding
+			}
+			
+			-------------------------------------------
+			
+			
+			
+			Angular : Two-way data-binding  ( depth )
+			
+			
+			------------------------
+			
+			When Angular booting
+			
+			
+			  --> compilation-phase
+			  
+			  
+			      Register 'watch-Expressions' on DOM elements 
+				  where we used 'directives' or 'expression' to
+				  do DOM update .
+			
+			
+			---------------------------------------------------------
+			
+			When model get change in scope(s) ,
+			
+			
+			Internally , angular runs 'digest-loop' , 
+			this will trigger to execute all 'watch-expressions',
+			will update  model values .
+			
+			--------------------------------------------------------
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
